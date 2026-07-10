@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Taehee Kim</title>
+  
+  
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #F5E4C4;
+      color: #111;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; }
+
+    nav {
+      padding: 40px 48px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name { font-size: 14px; text-decoration: none; font-weight: 400; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      color: #8a6e4a;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111; }
+    .nav-links a.active { color: #111; }
+
+    main {
+      flex: 1;
+      padding: 0 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 480px;
+    }
+
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #b8956a;
+      margin-bottom: 28px;
+    }
+
+    .contact-note {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .contact-rows { display: flex; flex-direction: column; gap: 14px; }
+
+    .contact-row {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      align-items: baseline;
+    }
+
+    .c-label {
+      font-size: 11px;
+      color: #b8956a;
+      letter-spacing: 0.06em;
+      min-width: 72px;
+      text-transform: uppercase;
+    }
+
+    .c-val a {
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+    .c-val a:hover { border-color: #111; }
+    .c-val span { color: #555; }
+
+    footer {
+      padding: 32px 48px;
+      font-size: 12px;
+      color: #c9a87a;
+    }
+
+    @media (max-width: 560px) {
+      nav, main, footer { padding-left: 24px; padding-right: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-name" href="index.html">Taehee Kim</a>
+    <ul class="nav-links">
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="page-label">Contact</p>
+    <p class="contact-note">Open to internships and research opportunities.<br>Feel free to reach out anytime.</p>
+
+    <div class="contact-rows">
+      <div class="contact-row">
+        <span class="c-label">Email</span>
+        <span class="c-val"><a href="mailto:tk685@cornell.edu">tk685@cornell.edu</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">LinkedIn</span>
+        <span class="c-val"><a href="https://www.linkedin.com/in/taehee-kim-814849325/" target="_blank" rel="noopener">linkedin.com/in/taehee-kim</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">GitHub</span>
+        <span class="c-val"><a href="https://github.com/tk685-cpu" target="_blank" rel="noopener">github.com/tk685-cpu</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">Location</span>
+        <span class="c-val"><span>New York, USA</span></span>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Taehee Kim</footer>
+</body>
+</html>

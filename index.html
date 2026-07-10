@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taehee Kim</title>
+  
+  
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #F5E4C4;
+      color: #111;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; }
+
+    nav {
+      padding: 40px 48px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name { font-size: 14px; text-decoration: none; font-weight: 400; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      color: #8a6e4a;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #111; }
+
+    main {
+      flex: 1;
+      padding: 0 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 680px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .bio {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 28px;
+      max-width: 440px;
+    }
+
+    .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .links a {
+      font-size: 13px;
+      color: #8a6e4a;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .links a:hover { color: #111; border-color: #111; }
+
+    footer {
+      padding: 32px 48px;
+      font-size: 12px;
+      color: #c9a87a;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-name" href="index.html">Taehee Kim</a>
+    <ul class="nav-links">
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Taehee Kim</h1>
+    <p class="bio">
+      Junior at Cornell studying Electrical & Computer Engineering with a minor in Mechanical Engineering.
+      I design hardware, write firmware, and build robots, from combat bots that compete nationally to CubeSat avionics heading to orbit.
+    </p>
+    <div class="links">
+      <a href="https://github.com/tk685-cpu" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/taehee-kim-814849325/" target="_blank" rel="noopener">linkedin</a>
+      <a href="mailto:tk685@cornell.edu">email</a>
+    </div>
+  </main>
+
+  <footer>© 2026</footer>
+</body>
+</html>
