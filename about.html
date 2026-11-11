@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Taehee Kim</title>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #F5E4C4;
+      color: #111;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; }
+
+    nav {
+      padding: 40px 48px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name { font-size: 14px; text-decoration: none; font-weight: 400; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      color: #8a6e4a;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111; }
+    .nav-links a.active { color: #111; }
+
+    main {
+      flex: 1;
+      padding: 64px 48px 48px;
+      max-width: 820px;
+    }
+
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #b8956a;
+      margin-bottom: 40px;
+    }
+
+    /* one block per resume section */
+    .about-section { margin-bottom: 44px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #b8956a;
+      margin-bottom: 12px;
+    }
+
+    /* a single job, team, or school */
+    .entry {
+      padding: 18px 0;
+      border-bottom: 1px solid #dcc89a;
+    }
+    .entry:first-of-type { border-top: 1px solid #dcc89a; }
+
+    .entry-name {
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .entry-type {
+      font-size: 12px;
+      color: #b8956a;
+      margin-left: 6px;
+    }
+
+    .entry-meta {
+      font-size: 11px;
+      color: #b8956a;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .entry-desc {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* skills and coursework */
+    .skill-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .skill-group {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .skill-label {
+      font-size: 11px;
+      color: #b8956a;
+      letter-spacing: 0.06em;
+      min-width: 120px;
+      text-transform: uppercase;
+    }
+
+    .skill-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .skill-pill {
+      font-size: 11px;
+      color: #8a6e4a;
+      background: #e8d4ac;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .entry .skill-pills { margin-top: 12px; }
+
+    footer {
+      padding: 32px 48px;
+      font-size: 12px;
+      color: #c9a87a;
+    }
+
+    @media (max-width: 560px) {
+      nav, main, footer { padding-left: 24px; padding-right: 24px; }
+      .skill-group { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-name" href="index.html">Taehee Kim</a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">about</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="page-label">About</p>
+
+    <!-- EDUCATION -->
+    <section class="about-section">
+      <h2 class="section-label">Education</h2>
+
+      <div class="entry">
+        <p class="entry-name">Cornell University <span class="entry-type">College of Engineering</span></p>
+        <p class="entry-meta">Aug 2024 – May 2028 · Ithaca, NY</p>
+        <p class="entry-desc">B.S. in Electrical and Computer Engineering, Minor in Mechanical Engineering.</p>
+        <p class="entry-desc">Fall 2026 Undergraduate Research Award, Cornell Office of Inclusive Excellence (Boeing-funded).</p>
+        <div class="skill-pills">
+          <span class="skill-pill">Computer Architecture</span>
+          <span class="skill-pill">Digital Systems Design Using Microcontrollers</span>
+          <span class="skill-pill">Signals and Systems</span>
+          <span class="skill-pill">Embedded Systems</span>
+          <span class="skill-pill">Circuits</span>
+          <span class="skill-pill">Data Science for Engineers</span>
+          <span class="skill-pill">Digital Logic</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="about-section">
+      <h2 class="section-label">Experience</h2>
+
+      <div class="entry">
+        <p class="entry-name">Helbling Research Group <span class="entry-type">Firmware Intern</span></p>
+        <p class="entry-meta">Jun 2026 – Present · Ithaca, NY</p>
+        <p class="entry-desc">Designed, tested, and implemented a single-layer sensor PCB in Altium for GammaBot, a sub-gram lake-surface swarm robot. Implementing the Bug 2 navigation algorithm in C++ for autonomous light-seeking and obstacle avoidance on an Artemis microcontroller.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-name">Seoul National University <span class="entry-type">Hardware Intern</span></p>
+        <p class="entry-meta">Jun 2026 – Aug 2026 · Seoul, South Korea</p>
+        <p class="entry-desc">Conducted repeated LiDAR SLAM trials for a PhD loop-closure study under Prof. Tae-Wan Kim, operating an Ouster LiDAR, depth camera, and IMU on a Jetson with ROS2. Co-authoring the resulting paper, now in preparation.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-name">Prime Motors <span class="entry-type">Engineering Intern</span></p>
+        <p class="entry-meta">May 2025 – Aug 2025 · Incheon, South Korea</p>
+        <p class="entry-desc">Engineered RS-485 and relay-based control architectures to convert 3 commercial vehicles into remotely operated platforms. Diagnosed and resolved faults across 10+ industrial forklifts per month.</p>
+      </div>
+    </section>
+
+    <!-- TEAMS -->
+    <section class="about-section">
+      <h2 class="section-label">Teams</h2>
+
+      <div class="entry">
+        <p class="entry-name">Combat Robotics at Cornell <span class="entry-type">Electronics Lead</span></p>
+        <p class="entry-meta">Sep 2025 – Present</p>
+        <p class="entry-desc">Designed custom power distribution, ESC, and BEC boards for a 12 lb vertical spinner, and CADed its drivetrain and weapon assembly. The team won 9 NHRL matches.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-name">Space Systems Design Studio <span class="entry-type">DeSCENT Mission</span></p>
+        <p class="entry-meta">Aug 2025 – May 2026</p>
+        <p class="entry-desc">Designed and fabricated a 2-DOF motorized antenna ground station, writing PWM and timer firmware to slew it by GPS bearing in real time.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="about-section">
+      <h2 class="section-label">Skills</h2>
+
+      <div class="skill-groups">
+        <div class="skill-group">
+          <span class="skill-label">Languages</span>
+          <div class="skill-pills">
+            <span class="skill-pill">C/C++</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Verilog</span>
+            <span class="skill-pill">Assembly</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <span class="skill-label">Tools</span>
+          <div class="skill-pills">
+            <span class="skill-pill">ROS2</span>
+            <span class="skill-pill">NVIDIA Jetson</span>
+            <span class="skill-pill">Vivado</span>
+            <span class="skill-pill">Vitis</span>
+            <span class="skill-pill">Xcelium</span>
+            <span class="skill-pill">Genus</span>
+            <span class="skill-pill">Altium</span>
+            <span class="skill-pill">KiCad</span>
+            <span class="skill-pill">LTspice</span>
+            <span class="skill-pill">Fusion 360</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <span class="skill-label">Domains</span>
+          <div class="skill-pills">
+            <span class="skill-pill">Digital Logic</span>
+            <span class="skill-pill">Embedded Systems</span>
+            <span class="skill-pill">RTL Design</span>
+            <span class="skill-pill">ASIC/FPGA</span>
+            <span class="skill-pill">Sensor Integration</span>
+            <span class="skill-pill">SLAM Data Collection</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <span class="skill-label">Lab &amp; Prototyping</span>
+          <div class="skill-pills">
+            <span class="skill-pill">Oscilloscope</span>
+            <span class="skill-pill">Multimeter</span>
+            <span class="skill-pill">Mills</span>
+            <span class="skill-pill">Lathes</span>
+            <span class="skill-pill">Laser Cutting</span>
+            <span class="skill-pill">3D Printing</span>
+            <span class="skill-pill">MIG Welding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Taehee Kim</footer>
+</body>
+</html>
