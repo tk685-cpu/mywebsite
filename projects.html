@@ -163,10 +163,11 @@
         </div>
         <div class="proj-detail-wrapper">
           <div class="proj-detail">
-            <img class="proj-detail-img" src="images/gammabot.png" alt="Helbling Research Group"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="proj-detail-placeholder" style="display:none">coming<br>soon</div>
             <div class="proj-detail-body">
+              <div class="proj-gallery">
+                <img src="images/gammabot.png" alt="GammaBot" />
+                <img src="images/gammabot_pcb.png" alt="GammaBot sensor PCB" />
+              </div>
               <video class="proj-video" controls>
                 <source src="images/gammabot.mp4" type="video/mp4">
               </video>
@@ -228,46 +229,123 @@
         </div>
       </div>
 
-      <!-- DIGITAL SYSTEMS DESIGN -->
-      <div class="project-item" id="proj-rp2350">
-        <div class="proj-header" onclick="toggleProject('proj-rp2350')">
-          <img class="proj-thumb" src="images/rp2350.jpg" alt="RP2350 projects"
+      <!-- DIGITAL SYSTEMS DESIGN: BIRDSONG SYNTHESIZER -->
+      <div class="project-item" id="proj-birdsong">
+        <div class="proj-header" onclick="toggleProject('proj-birdsong')">
+          <img class="proj-thumb" src="images/birdsong_spectrogram.png" alt="Birdsong spectrogram"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="proj-thumb-placeholder" style="display:none">coming<br>soon</div>
           <div class="proj-middle">
-            <p class="proj-name">Digital Systems Design <span class="proj-type">RP2350 Projects</span></p>
-            <p class="proj-desc-short">Three real-time builds on the RP2350: an audio synthesizer, a VGA Galton board, and a PID-stabilized helicopter arm.</p>
+            <p class="proj-name">Digital Systems Design <span class="proj-type">Birdsong Synthesizer</span></p>
+            <p class="proj-desc-short">Real-time birdsong synthesizer on the RP2350, generating tones by direct digital synthesis through an SPI DAC.</p>
           </div>
           <div class="proj-right">
             <div class="proj-tags">
               <span class="proj-tag">C</span><span class="proj-tag">·</span>
               <span class="proj-tag">RP2350</span><span class="proj-tag">·</span>
-              <span class="proj-tag">Real-Time</span>
+              <span class="proj-tag">DDS</span>
             </div>
             <span class="arrow">+</span>
           </div>
         </div>
         <div class="proj-detail-wrapper">
           <div class="proj-detail">
-            <img class="proj-detail-img" src="images/rp2350.jpg" alt="RP2350 projects"
+            <img class="proj-detail-img" src="images/birdsong_spectrogram.png" alt="Spectrogram of the sound produced by the MCU"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="proj-detail-placeholder" style="display:none">coming<br>soon</div>
             <div class="proj-detail-body">
-              <p class="proj-subhead">Real-time audio synthesizer</p>
-              <p class="proj-detail-desc">Generated tones via direct digital synthesis, driving an MCP4822 DAC over SPI from a fixed-rate timer ISR, with ADC and keypad control for record and playback.</p>
-              <p class="proj-subhead">Digital Galton board</p>
-              <p class="proj-detail-desc">Simulated colliding balls through a 16-row peg array, rendering to VGA at 60 fps via PIO with double buffering and fixed-point collision physics tuned across both cores.</p>
-              <p class="proj-subhead">1-DOF PID helicopter</p>
-              <p class="proj-detail-desc">Stabilized a ducted-fan arm with a 1 kHz PID loop, fusing I2C IMU data through a complementary filter and driving the motor via hardware PWM with live UART tuning.</p>
+              <p class="proj-detail-desc">Built a real-time birdsong synthesizer on the RP2350 microcontroller. Generated tones via direct digital synthesis, driving an MCP4822 DAC over SPI from a fixed-rate timer ISR, with ADC and keypad control for record and playback. The image is a spectrogram of the sound produced by the microcontroller.</p>
               <p class="proj-duration">Fall 2026 · Digital Systems Design Using Microcontrollers</p>
               <div class="proj-skillset">
                 <span class="skill-pill">C</span>
+                <span class="skill-pill">RP2350</span>
                 <span class="skill-pill">Direct Digital Synthesis</span>
                 <span class="skill-pill">SPI</span>
-                <span class="skill-pill">I2C</span>
-                <span class="skill-pill">PWM</span>
+                <span class="skill-pill">DAC</span>
+                <span class="skill-pill">Timer Interrupts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIGITAL SYSTEMS DESIGN: GALTON BOARD -->
+      <div class="project-item" id="proj-galton">
+        <div class="proj-header" onclick="toggleProject('proj-galton')">
+          <img class="proj-thumb" src="images/galton_board.png" alt="Digital Galton board"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="proj-thumb-placeholder" style="display:none">coming<br>soon</div>
+          <div class="proj-middle">
+            <p class="proj-name">Digital Systems Design <span class="proj-type">Digital Galton Board</span></p>
+            <p class="proj-desc-short">Simulated balls falling through a 16-row peg array, rendered to a VGA display at 60 fps.</p>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags">
+              <span class="proj-tag">C</span><span class="proj-tag">·</span>
+              <span class="proj-tag">RP2350</span><span class="proj-tag">·</span>
+              <span class="proj-tag">VGA</span>
+            </div>
+            <span class="arrow">+</span>
+          </div>
+        </div>
+        <div class="proj-detail-wrapper">
+          <div class="proj-detail">
+            <img class="proj-detail-img" src="images/galton_board.png" alt="Digital Galton board on a VGA display"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="proj-detail-placeholder" style="display:none">coming<br>soon</div>
+            <div class="proj-detail-body">
+              <p class="proj-detail-desc">Built a digital Galton board on the RP2350 microcontroller. Simulated colliding balls falling through a 16-row peg array, rendering to a VGA display at 60 fps via PIO with double buffering. The collision physics use fixed-point math and are tuned across both cores. A histogram along the bottom of the screen tracks where the balls land, building up a bell curve.</p>
+              <p class="proj-duration">Fall 2026 · Digital Systems Design Using Microcontrollers</p>
+              <div class="proj-skillset">
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">RP2350</span>
                 <span class="skill-pill">VGA/PIO</span>
+                <span class="skill-pill">Double Buffering</span>
+                <span class="skill-pill">Fixed-Point Math</span>
+                <span class="skill-pill">Multicore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIGITAL SYSTEMS DESIGN: PID HELICOPTER -->
+      <!-- Photo coming soon: save it as images/pid_helicopter.jpg and it will show up automatically -->
+      <div class="project-item" id="proj-helicopter">
+        <div class="proj-header" onclick="toggleProject('proj-helicopter')">
+          <img class="proj-thumb" src="images/pid_helicopter.jpg" alt="1-DOF PID helicopter"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="proj-thumb-placeholder" style="display:none">coming<br>soon</div>
+          <div class="proj-middle">
+            <p class="proj-name">Digital Systems Design <span class="proj-type">1-DOF PID Helicopter</span></p>
+            <p class="proj-desc-short">Ducted-fan arm stabilized by a 1 kHz PID loop, fusing IMU data through a complementary filter.</p>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags">
+              <span class="proj-tag">C</span><span class="proj-tag">·</span>
+              <span class="proj-tag">RP2350</span><span class="proj-tag">·</span>
+              <span class="proj-tag">PID</span>
+            </div>
+            <span class="arrow">+</span>
+          </div>
+        </div>
+        <div class="proj-detail-wrapper">
+          <div class="proj-detail">
+            <img class="proj-detail-img" src="images/pid_helicopter.jpg" alt="1-DOF PID helicopter"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="proj-detail-placeholder" style="display:none">coming<br>soon</div>
+            <div class="proj-detail-body">
+              <p class="proj-detail-desc">Built a 1-DOF helicopter on the RP2350 microcontroller. Stabilized a ducted-fan arm with a 1 kHz PID loop, fusing I2C IMU data through a complementary filter and driving the motor via hardware PWM, with live gain tuning over UART.</p>
+              <p class="proj-duration">Fall 2026 · Digital Systems Design Using Microcontrollers</p>
+              <div class="proj-skillset">
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">RP2350</span>
                 <span class="skill-pill">PID Control</span>
+                <span class="skill-pill">I2C</span>
+                <span class="skill-pill">IMU</span>
+                <span class="skill-pill">Complementary Filter</span>
+                <span class="skill-pill">PWM</span>
+                <span class="skill-pill">UART</span>
               </div>
             </div>
           </div>
@@ -277,7 +355,7 @@
       <!-- SEOUL NATIONAL UNIVERSITY -->
       <div class="project-item" id="proj-snu">
         <div class="proj-header" onclick="toggleProject('proj-snu')">
-          <img class="proj-thumb" src="images/snu_slam.jpg" alt="LiDAR SLAM setup"
+          <img class="proj-thumb" src="images/lidar.png" alt="LiDAR SLAM point cloud" style="object-position: left"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="proj-thumb-placeholder" style="display:none">coming<br>soon</div>
           <div class="proj-middle">
@@ -295,7 +373,7 @@
         </div>
         <div class="proj-detail-wrapper">
           <div class="proj-detail">
-            <img class="proj-detail-img" src="images/snu_slam.jpg" alt="LiDAR SLAM setup"
+            <img class="proj-detail-img" src="images/lidar.png" alt="LiDAR SLAM point cloud" style="object-position: left"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="proj-detail-placeholder" style="display:none">coming<br>soon</div>
             <div class="proj-detail-body">
